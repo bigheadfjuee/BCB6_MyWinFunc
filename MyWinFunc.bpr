@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="output\MyWinFunc.exe"/>
-    <OBJFILES value="temp\MyWinFunc.obj temp\Unit1.obj"/>
+    <OBJFILES value="temp\MyWinFunc.obj temp\Unit1.obj temp\uMyWinFunc.obj"/>
     <RESFILES value="MyWinFunc.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -32,14 +32,14 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="MyWinFunc.cpp"/>
-    <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;I:\MyMac;src;$(BCB)\Projects\Bpl;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt"/>
-    <LIBPATH value="&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;I:\MyMac;lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt"/>
+    <INCLUDEPATH value="C:\WINDOWS\system32;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;I:\MyMac;src;$(BCB)\Projects\Bpl;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt"/>
+    <LIBPATH value="C:\WINDOWS\system32;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;I:\MyMac;lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I&quot;C:\Program Files\Borland\CBuilder6\Bin&quot; -II:\MyMac -Isrc 
-      -I$(BCB)\Projects\Bpl -I$(BCB)\Imports -I$(BCB)\include 
+    <IDLCFLAGS value="-IC:\WINDOWS\system32 -I&quot;C:\Program Files\Borland\CBuilder6\Bin&quot; 
+      -II:\MyMac -Isrc -I$(BCB)\Projects\Bpl -I$(BCB)\Imports -I$(BCB)\include 
       -I$(BCB)\include\vcl -I$(BCB)\Source\DSPack234 -I$(BCB)\Source\Indy9 
       -I$(BCB)\Source\SUIPack -I$(BCB)\Source\Tnt -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -6 -b- -k -y -v -vi- 
@@ -60,16 +60,17 @@
       <FILE FILENAME="MyWinFunc.res" FORMNAME="" UNITNAME="MyWinFunc.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="MyWinFunc.cpp" FORMNAME="" UNITNAME="MyWinFunc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="uMyWinFunc.cpp" FORMNAME="" UNITNAME="uMyWinFunc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
 
   <IDEOPTIONS>
 [Version Info]
-IncludeVerInfo=0
+IncludeVerInfo=1
 AutoIncBuild=1
 MajorVer=2
-MinorVer=3
+MinorVer=1
 Release=0
 Build=23
 Debug=0
@@ -83,7 +84,7 @@ CodePage=950
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=2.3.0.23
+FileVersion=2.1.0.23
 InternalName=
 LegalCopyright=
 LegalTrademarks=
@@ -93,19 +94,21 @@ ProductVersion=2.3
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=4
-Item0=src;$(BCB)\Projects\Bpl;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
-Item1=..\WSC1200_Server;src;$(BCB)\Projects\Bpl;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
-Item2=src;$(BCB)\Imports;$(BCB)\Projects\Bpl;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
-Item3=src;$(BCB)\Imports;C:\Program Files\Borland\CBuilder6\Projects\Bpl\Indy\C6;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Count=5
+Item0=C:\WINDOWS\system32;C:\Program Files\Borland\CBuilder6\Bin;I:\MyMac;src;$(BCB)\Projects\Bpl;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item1=src;$(BCB)\Projects\Bpl;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item2=..\WSC1200_Server;src;$(BCB)\Projects\Bpl;$(BCB)\Imports;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item3=src;$(BCB)\Imports;$(BCB)\Projects\Bpl;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item4=src;$(BCB)\Imports;C:\Program Files\Borland\CBuilder6\Projects\Bpl\Indy\C6;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=5
-Item0=lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
-Item1=..\WSC1200_Server;src;lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
-Item2=src;lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
-Item3=src;$(BCB)\Imports;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
-Item4=src;$(BCB)\Imports;C:\Program Files\Borland\CBuilder6\Projects\Bpl\Indy\C6;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Count=6
+Item0=C:\WINDOWS\system32;C:\Program Files\Borland\CBuilder6\Bin;I:\MyMac;lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item1=lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item2=..\WSC1200_Server;src;lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item3=src;lib;$(BCB)\Projects\Lib;$(BCB)\Imports;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item4=src;$(BCB)\Imports;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Source\DSPack234;$(BCB)\Source\Indy9;$(BCB)\Source\SUIPack;$(BCB)\Source\Tnt
+Item5=src;$(BCB)\Imports;C:\Program Files\Borland\CBuilder6\Projects\Bpl\Indy\C6;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=2
